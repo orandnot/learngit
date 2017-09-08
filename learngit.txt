@@ -1,0 +1,31 @@
+git学习
+将文件放在工作区目录下
+git add 将文件上传至暂存区--------修改/添加的文件都需要先将文件上传至暂存区，之后才能提交到git版本库
+git commit -m <提交内容说明> 将文件提交git版本库
+git status 查看仓库状态
+git diff <文件名>查看被修改的内容
+git log 查看历史记录
+git log --pretty=oneline过滤历史记录
+git reset --hard HEAD^ 退回上一版本（HEAD当前版本，HEAD^上一版本，HEAD^^上上版本，HEAD^100上100个版本）
+git reset --hard <版本号> 直接退回到具体版本号，其中版本号没必要写全，前几位即可
+git reflog 查看命令历史
+git diff HEAD -- <文件名>查看工作区和版本库中最新版本的区别
+git checkout -- <文件名>丢弃工作区的修改
+git reset HEAD <文件名>撤销暂存区的修改
+rm <文件名> 删除工作区文件
+git rm <文件名> 删除版本库文件
+git checkout -- <文件名> 版本库版本替换工作区版本，相当于还原操作
+ssh-keygen -t rsa -C "youremail@example.com" 连接远程仓库（github中ssh key使用的是id_rsa.pub中的内容）
+git remote add origin git@github.com:michaelliao/learngit.git 将本地仓库连接到github
+git push -u origin master 将本地库内容推送至远程库，其中-u是第一次推送时使用的，之后可以不写
+git clone git@github.com:michaelliao/gitskills.git 从远程库克隆至本地库
+ls 查看当前目录下的可见文件
+ls -ah查看当前目录下的所有文件
+cd <路径>进入某个文件夹
+cd ..返回上级目录
+cat <文件>查看文件内容
+rm -rf <文件夹/名>删除文件夹或文件
+mkdir <文件夹/文件>创建文件夹
+pwd 显示当前目录
+git init 把当前目录变成git仓库
+
