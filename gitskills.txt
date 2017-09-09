@@ -32,8 +32,10 @@ pwd 显示当前目录
 git init 把当前目录变成git仓库
 git checkout -b dev 创建dev分支，并切换至dev分支，相当于git branch dev     git checkout dev
 git branch 查看所有分支，当前分支前面会有*标记
-git checkout <branch>切换至某分支
-git branch <branch>创建分支
-git branch -d <branch>删除分支
-git merge <branch>将分支合并至当前分支
+git checkout <branchname>切换至某分支
+git branch <branchname>创建分支
+git branch -d <branchname>删除分支
+git merge <branchname>将分支合并至当前分支
 当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
+git merge --no-ff -m "提交说明" <branchname> 合并分支至当前分支，并禁用Fast forward（--no-ff）
+一般来说，合并分支时，master分支应该是非常稳定的，仅用来发布新版本，平时干活的时候，使用dev分支，之后再将分支合并到master上，master分支稳定后，在push到远程库上发布
