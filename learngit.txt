@@ -28,8 +28,12 @@ rm -rf <文件夹/名>删除文件夹或文件
 mkdir <文件夹/文件>创建文件夹
 pwd 显示当前目录
 git init 把当前目录变成git仓库
-git checkout -b dev 创建dev分支，并切换至dev分支，相当于git branch dev     git checkout devs
+git checkout -b dev 创建dev分支，并切换至dev分支，相当于git branch dev     git checkout dev
 git branch 查看所有分支，当前分支前面会有*标记
+git checkout <branch>切换至某分支
+git branch <branch>创建分支
+git branch -d <branch>删除分支
+git merge <branch>将分支合并至当前分支
 
 
 
