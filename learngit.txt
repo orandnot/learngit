@@ -36,6 +36,4 @@ git branch -d <branch>删除分支
 git merge <branch>将分支合并至当前分支
 
 
-
-
-哈哈哈哈哈
+解决冲突
