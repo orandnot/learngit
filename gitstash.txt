@@ -1,7 +1,18 @@
-for test
-
-
-
-
-出现bug,并修改
-正常工作
+工作的过程中，测试提出BUG，正在编写的代码还不能提交，可以采用下面的方式进行解决
+1.使用git status存储当前工作(当前分区为dev)
+2.创建分支修复
+	1>确定在哪个分支上修复，如master(git checkout master)
+	2>在确定分支上创建临时分支(git checkout -b issue-001)
+3.修复bug
+	1>提交修改(git add file ,git commit -m "...")
+4.切换分支到问题分支master(git checkout master)
+5.合并分支(git merge --no-ff -m "merged bug fix 001" issue-001)
+6.删除分支issue-001(git branch -d issue-001)
+7.返回原来分支(git checkout dev)
+8.查看原来的工作现场(git stash list)
+9.恢复工作现场
+	1>git stash apply 恢复工作现场，但不删除stash
+	2>git stash drop  删除stash
+	3>git stash pop  恢复工作现场，并删除stash
+10.删除stash后，可以通过git stash list查看是否删除成功
+11.可以多次stash，恢复的时候可以通过git stash list 查看，然后通过git stash apply stash@{0} 指定具体stash
