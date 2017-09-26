@@ -43,4 +43,4 @@ git stash 存储，用于修复BUG时，存储工作区
 git stash apply 恢复工作现场，但stash内容并不删除
 git stash drop 删除stash内容
 git stash pop，恢复工作现场储同时删除stash内容
-
+git branch -D <name>强行删除没有被合并过的分支
